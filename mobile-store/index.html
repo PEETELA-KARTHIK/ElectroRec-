@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Mobile Phone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mobile Phone Store</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="fetchPhones('all')">All</a></li>
+            <!-- <li><a href="#" onclick="fetchPhones('android')">Android</a></li>
+            <li><a href="#" onclick="fetchPhones('ios')">iOS</a></li> 
+            <li><a href="#" onclick="fetchPhones('windows')">Windows</a></li> -->
+            <li><a href="#" onclick="sortPhones('best-camera')">Best Camera</a></li>
+            <li><a href="#" onclick="sortPhones('best-value')">Best Gaming</a></li>
+            <li><a href="#" onclick="sortPhones('best-display')">Best Display</a></li>
+           <!-- <li><a href="#" onclick="sortPhones('best-value')">Best Value</a></li> -->
+        </ul>
+    </nav>
+    <main>
+        <div class="phone-container" id="phone-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

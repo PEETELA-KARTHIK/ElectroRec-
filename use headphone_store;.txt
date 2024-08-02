@@ -1,0 +1,46 @@
+use headphone_store;
+
+db.phones.insertMany([
+    {
+        name: "Nothing",
+        price: 799,
+        category: "android",
+        image: "images/wire.jpg",
+        specs: "https://amzn.in/d/hq0o6ss"
+    },
+    {
+        name: "Boat",
+        price: 999,
+        category: "ios",
+        image: "images/boat.jpg",
+        specs: "6.1 inch, 4GB RAM, 64GB Storage"
+    },
+    {
+        name: "Logitech",
+        price: 499,
+        category: "windows",
+        image: "images/gaming.jpg",
+        specs: "5.2 inch, 3GB RAM, 32GB Storage"
+    },
+    {
+        name: "JBL",
+        price: 699,
+        category: "android",
+        image: "images/jbl.jpg",
+        specs: "6.0 inch, 8GB RAM, 128GB Storage"
+    },
+    {
+        name: "Air buds",
+        price: 1099,
+        category: "ios",
+        image: "images/airbuds.jpg",
+        specs: "6.1 inch, 6GB RAM, 128GB Storage"
+    },
+    {
+        name: "Zebronics",
+        price: 599,
+        category: "windows",
+        image: "images/zebronics.jpg",
+        specs: "5.96 inch, 4GB RAM, 64GB Storage"
+    }
+]);
