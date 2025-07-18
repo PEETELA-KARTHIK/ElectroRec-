@@ -3,15 +3,40 @@
 ## Overview
 ElectroRec is a multi-store e-commerce web application for electronics, featuring dedicated stores for Mobiles, Laptops, Smartwatches, and Headphones. Each store is a self-contained Node.js/Express/MongoDB app with a modern, unified frontend. The project is ideal for learning full-stack web development, database integration, and modular app design.
 
-## Features
-- **Landing Page:** Central hub with categories and links to each store.
-- **Individual Stores:**
-  - Product listing with images, price, and specs
-  - Filtering and sorting by category or feature (e.g., Best Camera, Gaming, Display)
-  - Responsive, modern UI
-  - Backend API (Node.js/Express) with MongoDB for product data
-- **Navigation:** Easily switch between stores using the top navigation bar
-- **Consistent Design:** Unified look and feel across all stores
+---
+
+## 🚩 Features Table
+
+| Feature                | Headphone | Laptop | Mobile | Smartwatch |
+|------------------------|:---------:|:------:|:------:|:----------:|
+| Product Listing        |     ✅     |   ✅   |   ✅   |     ✅     |
+| Product Filtering      |     ✅     |   ✅   |   ✅   |     ✅     |
+| Product Sorting        |     ❌     |   ✅   |   ✅   |     ❌     |
+| Product Details Modal  |     ✅     |   ✅   |   ✅   |     ✅     |
+| Loading Spinner        |     ✅     |   ✅   |   ✅   |     ✅     |
+| Responsive Design      |     ✅     |   ✅   |   ✅   |     ✅     |
+| Backend API (Express)  |     ✅     |   ✅   |   ✅   |     ✅     |
+| MongoDB Integration    |     ✅     |   ✅   |   ✅   |     ✅     |
+| Navigation Bar         |     ✅     |   ✅   |   ✅   |     ✅     |
+
+---
+
+## 📸 Screenshots
+
+> _Add screenshots of your landing page and each store below. Replace the placeholders with actual images after deployment._
+
+- **Landing Page:**
+  ![Landing Page](screenshots/landing-page.png)
+- **Headphone Store:**
+  ![Headphone Store](screenshots/headphone-store.png)
+- **Laptop Store:**
+  ![Laptop Store](screenshots/laptop-store.png)
+- **Mobile Store:**
+  ![Mobile Store](screenshots/mobile-store.png)
+- **Smartwatch Store:**
+  ![Smartwatch Store](screenshots/smartwatch-store.png)
+
+---
 
 ## Folder Structure
 ```
@@ -24,6 +49,8 @@ ElectroRec-/
 ```
 - Each store contains its own `index.html`, `server.js`, `script.js`, `styles.css`, and images.
 - The Landing page is the main entry point with category navigation.
+
+---
 
 ## Setup & Running Locally
 Each store is a separate Node.js app. To run a store:
@@ -39,33 +66,67 @@ Each store is a separate Node.js app. To run a store:
    ```
 3. **Open the Store**
    - Open `index.html` in your browser for the frontend.
-   - The backend API runs on `localhost:3000` (or as configured).
+   - The backend API runs on `localhost:<port>` (see each server.js for port).
 
 > Repeat for each store (`Headphone-store`, `Laptop-store`, `mobile-store`, `Smartwatch-store`).
+
+---
 
 ## Usage
 - Visit the Landing page to choose a category.
 - Use the navigation bar to switch between stores.
 - Filter or sort products using the options provided in each store.
-- Click on products for more details (future enhancement).
+- Click on products for more details in a modal popup.
+
+---
 
 ## Tech Stack
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB (via Mongoose)
 
-## Contribution Guidelines
-1. Fork the repository and create a new branch for your feature or bugfix.
-2. Make your changes in the relevant store folder.
-3. Test your changes locally.
-4. Submit a pull request with a clear description of your changes.
+---
+
+## 🤝 Contribution Guide
+
+1. **Fork** this repository and create a new branch for your feature or bugfix.
+2. **Make your changes** in the relevant store folder.
+3. **Test** your changes locally (run the server and check the UI).
+4. **Add screenshots** if you change the UI.
+5. **Commit** and push your changes.
+6. **Submit a pull request** with a clear description of your changes.
+
+### Code Style
+- Use consistent indentation and naming conventions.
+- Comment your code where necessary.
+- Keep UI/UX consistent with the rest of the project.
+
+---
+
+## 🛠️ FAQ & Troubleshooting
+
+**Q: The app doesn't connect to MongoDB.**
+- A: Make sure your MongoDB URI is correct and your cluster is running. Check your network access settings in MongoDB Atlas.
+
+**Q: The server doesn't start.**
+- A: Ensure all dependencies are installed (`npm install`). Check for typos in `server.js` and `package.json`.
+
+**Q: The modal or spinner doesn't show up.**
+- A: Make sure you have the latest `script.js` and `styles.css` files. Clear your browser cache and refresh.
+
+**Q: How do I deploy this project?**
+- A: See the deployment section above for Heroku, Render, or Railway instructions.
+
+---
 
 ## Future Enhancements
-- Product detail modals/popups
 - User authentication and cart functionality
 - Admin dashboard for product management
-- Deployment to cloud platforms (e.g., Heroku, Vercel)
-- Add screenshots to this README
+- Deployment to cloud platforms (e.g., Render, Railway, Vercel)
+- Add real screenshots to this README
+- Add product management (add/edit/delete) for admins
+
+---
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE). 

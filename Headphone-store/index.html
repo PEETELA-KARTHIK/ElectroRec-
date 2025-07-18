@@ -28,6 +28,12 @@
     <main>
         <div class="phone-container" id="phone-container"></div>
     </main>
+    <div id="product-modal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:1000;">
+      <div class="modal-content" style="background:#fff; padding:30px; border-radius:10px; max-width:400px; width:90%; position:relative;">
+        <span id="close-modal" style="position:absolute; top:10px; right:20px; font-size:2em; cursor:pointer;">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
