@@ -7,10 +7,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/mobile_store', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+const PORT = process.env.PORT || 3000;
+
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 const phoneSchema = new mongoose.Schema({
     name: String,
@@ -76,6 +77,6 @@ app.get('/phones/sort/:criteria', async (req, res) => {
     }
 });
 
-app.listen(4000, () => {
-    console.log('Server is running on port 4000');
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
